@@ -1,0 +1,207 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% LaTeX Template -----------------------------------------------------
+%       Name: Template for Tutorial Questions & Answers
+%       Description: The template is used for displaying tutorial
+%       questions with the option to show questions only, or both
+%       questions and answers
+%
+% Author Details -----------------------------------------------------
+%       Kamilul Ashraf Bin Kamsani
+%       National University of Singapore
+%       kamilul@comp.nus.edu.sg
+%
+% Documentation ------------------------------------------------------
+%
+%       * At line 29, you can choose either
+%   (i)  Show ques only: \documentclass[11pt,a4paper]{exam} or 
+%   (ii) Show ques and ans: \documentclass[11pt,a4paper,answers]{exam} 
+%
+%       * Compile the .tex document to the see the difference
+%   (i)  For show ques, document name will change to "Questions", the 
+%        author's name and the disclaimer message will not appear
+%   (ii) For show ques and ans, document name will change to "Answers",
+%        the author's name and the disclaimer message will appear
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,answers]{exam}
+
+%% - Required Packages
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+
+%% - Commands
+\renewcommand{\solutiontitle}{\noindent\textbf{Answers:}\par\noindent} % default word is "Solutions:"
+\newcommand{\choosedocumenttitle}{\ifprintanswers\documenttitle \\ \else \altdocumenttitle \\ \fi} % doc. title will change, ie. answers or questions
+\newcommand{\chooseshowname}{\ifprintanswers \authorname \\ \authorschool \\ \em \authoremail \fi} % author info will not show when in questions mode
+\newcommand{\choosedate}{\ifprintanswers \vspace{-3ex} \else \vspace{-9ex} \fi}
+
+%% - Document Information
+\newcommand{\documenttitle}{Answers for Tutorial \#2} % doc. title for questions and answers
+\newcommand{\altdocumenttitle}{Questions for Tutorial \#2} % alt. doc. title for questions only
+\newcommand{\modulename}{IS2102: Requirements Analysis and Design} % module name
+\newcommand{\authorname}{Kamilul Ashraf Kamsani} % author name
+\newcommand{\authorschool}{National University of Singapore} % author's institution
+\newcommand{\authoremail}{kamilul@comp.nus.edu.sg} % author's email
+
+%% - Title
+\title{\choosedocumenttitle \vspace{-1ex}\begin{large}\em \modulename \end{large} \\}
+\author{\chooseshowname}
+\date{\choosedate}
+
+%----------------------------------------------------------------------
+%       DOCUMENT CONTENT
+%----------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+\thispagestyle{empty} % enable first page to NOT show page number
+\begin{questions}
+
+%----------------------------------------------------------------------
+%       QUESTION 1
+%----------------------------------------------------------------------
+
+\question What are the phases in most SDLCs?
+\begin{solution}
+\begin{itemize}
+
+        \item Initiation during which a business case is made for the project (includes Business Modeling discipline)
+        \item Discovery during which the eliciting, analysis, and documentation of detailed requirements peaks.
+        \item Construction during which the IT solution (or Information System) is built (includes Design, Implementation, Testing disciplines)
+        \item Final Verification and Validation (includes Testing discipline)
+        \item Closeout (includes Deployment discipline)
+        
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------
+%       QUESTION 2
+%----------------------------------------------------------------------
+
+\question What are the objectives of the initiation phase?
+\begin{solution}
+\begin{itemize}
+
+        \item To develop the business case for the project
+        \item To establish project and product scope
+        \item To explore solutions, including the preliminary architecture
+
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------
+%       QUESTION 3
+%----------------------------------------------------------------------
+
+\question What are the deliverables of the initiation phase?
+\begin{solution}
+\begin{itemize}
+
+        \item A single document: Business Requirements Document (BRD) to describe business requirements
+        \item The BRD will be revised as the project progresses
+        \item Key components of the BRD produced during the Initiation phase include
+
+        \begin{itemize}
+        \item Business use-case descriptions include business use-case diagrams
+        \item Role map
+        \item System use-case diagram
+        \item Initial class diagram describing key business classes
+        \end{itemize}
+
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------
+%       QUESTION 4
+%----------------------------------------------------------------------
+
+\question What are the elements of an activity diagram?
+\begin{solution}
+\begin{itemize}
+
+        \item \textbf{Initial node:}  indicates where the workflow begins
+        \item \textbf{Activity:} indicates a step in the process. Notice anything about the typical naming convention?
+        \item \textbf{Control flow:} an arrow showing the direction of the workflow
+        \item \textbf{Decision:} a diamond symbol, indicating a possibility of different paths
+        \item \textbf{Guard condition:} a condition attached to a control flow. A guard is shown within square brackets
+        \item \textbf{Merge:} model a number of alternative flows that lead to the same activity
+        \item \textbf{Event:} a trigger attached to a control flow and is indicated without the use of square brackets
+        \item \textbf{Final node:} indicates the end of the process
+        \item \textbf{Fork and Join:} bars used to document parallel activities.
+        \begin{itemize}
+                \item A \textbf{fork} indicates the point after which a number of activities may begin in any order. 
+                \item A \textbf{join} indicates that workflow may commence only once the parallel activities that flow into it have all been completed.
+        \end{itemize}
+
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------
+%       QUESTION 5
+%----------------------------------------------------------------------
+
+\question What are some of the modeling elements in business use-case diagram?
+\begin{solution}
+\begin{itemize}
+
+        \item \textbf{Business actor:} someone external to the business
+        \item \textbf{Worker:} someone who works within the business
+        \item \textbf{Association:} indicates that the actor interacts with the business over the course of the business use case
+
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------
+%       QUESTION 6
+%----------------------------------------------------------------------
+
+\question What is the purpose of an activity diagram and what is the difference between an activity and an action?
+\begin{solution}
+\begin{itemize}
+
+        \item An activity diagram models the work flow of each business use case
+        \item An action is a simple, nondecomposable piece of behavior, while an activity is used to represent a set of actors.
+
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------
+%       QUESTION 7
+%----------------------------------------------------------------------
+
+\question What is meant by polymorphism when applied to object oriented systems?
+\begin{solution}
+
+        The polymorphic methods in the classes can have many different implementations according to number of parameters or the subclasses implementing the abstract methods.
+
+\end{solution}
+
+%----------------------------------------------------------------------
+%       QUESTION 8
+%----------------------------------------------------------------------
+
+\question What techniques are used by analysts when they need to guide users in explaining what is wanted from a system?
+\begin{solution}
+\begin{itemize}
+
+        \item Interviews (Top-down or Bottom-up)
+        \item Joint Application Development (JAD)
+        \item Questionnaires
+
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------
+%       DISCLAIMER
+%       You can remove the entire section if not required
+%%----------------------------------------------------------------------
+
+ \ifprintanswers \begin{small}\em \underline{Disclaimer:} These answers are not necessarily correct, infact they might be wrong! (because I blindly copied it from the slides) Hence, I'd be happy if you are willing to share your answers to correct the ones above. Email me at \authoremail!\end{small} \fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{questions}
+\end{document}
